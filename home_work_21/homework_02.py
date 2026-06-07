@@ -22,7 +22,13 @@ students = [
 from collections import defaultdict
 
 def get_students_groups(students):
-    pass
+    dd = defaultdict(list)
+    for class_num, student in students:
+        dd[class_num].append(student)
+    return dict(dd)
+
+
+
 
 students = [("class1", "Alice"), ("class2", "Bob"), ("class1", "Charlie"), ("class3", "Daisy")]
 sample = {'class1': ['Alice', 'Charlie'], 'class2': ['Bob'], 'class3': ['Daisy']}
